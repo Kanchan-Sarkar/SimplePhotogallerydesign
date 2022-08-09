@@ -104,6 +104,17 @@
       justify-content: center;
       align-items: center;
     }
+    .logo{
+        color:black;
+        font-size: 35px;
+        letter-spacing: 1px;
+        font-family: "Brush Script MT";
+      }
+    span{
+        font-family: "Brush Script MT";
+        color:#f9004d;
+    
+    }
     .gallery {
       --s: 170px;
       --g: 8px;
