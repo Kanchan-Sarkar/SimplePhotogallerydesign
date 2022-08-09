@@ -1,100 +1,111 @@
 * {
-  padding: 0;
-  margin: 0;
-  font-family: 'Josefin Sans', sans-serif;
-  box-sizing: border-box;
-}
-body {
-  margin: 0;
-  margin-top: 20px;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  background-image: linear-gradient(195deg, #cc99ff, #ff99cc);
-}
-.gallery {
-  --s: 200px;
-  --g: 8px;
-
-  display: grid;
-  grid: auto-flow var(--s) / repeat(2, var(--s));
-  gap: var(--g);
-}
-.gallery > img {
-  width: 100%;
-  aspect-ratio: 1;
-  cursor: pointer;
-  filter: grayscale();
-  z-index: 0;
-  transition: 0.25s, z-index 0s 0.25s;
-}
-.gallery > img:hover {
-  width: calc(200% + var(--g));
-  filter: grayscale(0);
-  z-index: 1;
-  --_c: 50%;
-  transition: 0.4s, z-index 0s;
-}
-.gallery > img:nth-child(1) {
-  clip-path: circle(var(--_c, 55% at 70% 70%));
-  place-self: start;
-}
-.gallery > img:nth-child(2) {
-  clip-path: circle(var(--_c, 55% at 30% 70%));
-  place-self: start end;
-}
-.gallery > img:nth-child(3) {
-  clip-path: circle(var(--_c, 55% at 70% 30%));
-  place-self: end start;
-}
-.gallery > img:nth-child(3) {
-  clip-path: circle(var(--_c, 55% at 70% 30%));
-  place-self: end start;
-}
-.gallery > img:nth-child(4) {
-  clip-path: circle(var(--_c, 55% at 30% 30%));
-  place-self: end;
-}
-
-h3 {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-}
-
-@media (max-width: 1200px) {
-  body {
-    grid-template-columns: 100px 100px 100px;
+    padding: 0;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
   }
-}
-
-@media (max-width: 1100px) {
   body {
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 600px) {
-  body {
-    margin-top: 80px;
-  }
-  h3 {
-    width: 100%;
-    height: 60px;
-    top: 0;
-    left: 0;
-    right: 0;
-    backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.4);
-    z-index: 1000;
+    margin: 0;
+    margin-top: 20px;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    background-image: linear-gradient(195deg, #cc99ff, #ff99cc);
   }
   .gallery {
-    --s: 170px;
+    --s: 200px;
     --g: 8px;
+  
+    display: grid;
+    grid: auto-flow var(--s) / repeat(2, var(--s));
+    gap: var(--g);
   }
+  .gallery > img {
+    width: 100%;
+    aspect-ratio: 1;
+    cursor: pointer;
+    filter: grayscale();
+    z-index: 0;
+    transition: 0.25s, z-index 0s 0.25s;
+  }
+  .gallery > img:hover {
+    width: calc(200% + var(--g));
+    filter: grayscale(0);
+    z-index: 1;
+    --_c: 50%;
+    transition: 0.4s, z-index 0s;
+  }
+  .gallery > img:nth-child(1) {
+    clip-path: circle(var(--_c, 55% at 70% 70%));
+    place-self: start;
+  }
+  .gallery > img:nth-child(2) {
+    clip-path: circle(var(--_c, 55% at 30% 70%));
+    place-self: start end;
+  }
+  .gallery > img:nth-child(3) {
+    clip-path: circle(var(--_c, 55% at 70% 30%));
+    place-self: end start;
+  }
+  .gallery > img:nth-child(3) {
+    clip-path: circle(var(--_c, 55% at 70% 30%));
+    place-self: end start;
+  }
+  .gallery > img:nth-child(4) {
+    clip-path: circle(var(--_c, 55% at 30% 30%));
+    place-self: end;
+  }
+  
+  h3 {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+  }
+  .logo{
+    color:black;
+    font-size: 35px;
+    letter-spacing: 1px;
+    font-family: "Brush Script MT";
+  }
+  span{
+    font-family: "Brush Script MT";
+    color:#f9004d;
+
 }
+  
+  @media (max-width: 1200px) {
+    body {
+      grid-template-columns: 100px 100px 100px;
+    }
+  }
+  
+  @media (max-width: 1100px) {
+    body {
+      flex-direction: column;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    body {
+      margin-top: 80px;
+    }
+    h3 {
+      width: 100%;
+      height: 60px;
+      top: 0;
+      left: 0;
+      right: 0;
+      backdrop-filter: blur(10px);
+      background-color: rgba(255, 255, 255, 0.4);
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .gallery {
+      --s: 170px;
+      --g: 8px;
+    }
+  }
